@@ -1,0 +1,55 @@
+div{
+    /* background-color: grey; */
+}
+.casino-lists .row{
+    border-bottom: 1px solid black;
+    margin-bottom: .5rem;
+    padding: 1.5rem 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    padding-left: 1.3em;
+  }
+  li:before {
+    content: "\f017"; /* FontAwesome Unicode */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -1.3em; /* same as padding-left set on li */
+    width: 1.3em; /* same as padding-left set on li */
+  }
+
+  .play-btn{
+    padding: 0.8rem 1.5rem;
+    background-color: green;
+    border-radius: 5px;
+  }
+  .play-url{
+    color: white;
+  }
+  .terms{
+    font-size: 15px;
+  }
+  .features{
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+
+.casino-list-header{
+    padding: 1rem 0;
+    background-color: #D29F36;
+}
+
+.casino-img{
+    height: auto;
+    width: -webkit-fill-available;
+    object-fit: cover;
+}
+.casino-list-header p{
+    margin: 0;
+}
+
