@@ -30,20 +30,15 @@ $(document).ready(function(){
             var myImage = $('<img/>');
 
             myImage.attr('class', "casino-img casino-image"+i);
-            myImage.attr('src', '');
-
+            myImage.attr('src', '')
             $('.casino-img-container'+i).prepend(myImage);
-
             $('.casino-image'+i).attr("src", mydataArray[i].logo);
             $('.casino-url'+i).attr("href",myScript.siteUrl+'/'+mydataArray[i].brand_id);
-
-            
-           
             $('.bonus'+i).html(mydataArray[i].info.bonus);
 
 
             var featuresArray =mydataArray[i].info.features
-            
+
             for (let y = 0; y < featuresArray.length; y++) {
                 var myli = $('<li></li>');
 
@@ -52,20 +47,11 @@ $(document).ready(function(){
                 $('.features'+i).prepend(myli);
             }
            
-
             $(".play-url"+i).attr("href",myScript.siteUrl+'/'+mydataArray[i].play_url);
-            
             $('.terms'+i).html(mydataArray[i].terms_and_conditions);
                 
               var ratingNumber = mydataArray[i].info.rating;
               console.log(ratingNumber);
-
-              
-
-            //   function CreateRatingStars() {
-            //     $('.rating'+i).html(ratingStar);
-            //     $('.rating'+i).html(ratingStar);
-            //   }
 
               for (let x = 0; x < ratingNumber; x++) {
 
@@ -74,16 +60,8 @@ $(document).ready(function(){
                 $('.rating'+i).prepend(ratingStar);
                
               }
-
-
-
-                 
-
-
           }
           
-
-
     }).fail(function(){
         console.log('kalimera')
     })
