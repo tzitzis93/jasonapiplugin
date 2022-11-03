@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH') ){
 class Jasonapiplugin{
 
     function __construct() {
-        // add_action('init' , array( $this, 'custom_post_type' ) );
+
     }
 
     function register(){
@@ -35,12 +35,7 @@ class Jasonapiplugin{
     function uninstall(){
         flush_rewrite_rules();
     }
-    // function custom_post_type(){
-    //     register_post_type( 'Platforms', [ 
-    //         'public' => true,
-    //         'label' => 'Platforms',
-    //     ]);
-    // }
+    // Enqueue & Localize styles and scripts
     function enqueue(){
         wp_enqueue_style( 'mypluginstyle' , plugins_url( '/assets/style.css', __FILE__ )  );
         wp_enqueue_style('bootstrap_css', '//stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css');
@@ -60,12 +55,13 @@ class Jasonapiplugin{
 
 
 }
-
+// Ininialize plugin
 if( class_exists('Jasonapiplugin')){
    $jasonapiplugin = new Jasonapiplugin();
    $jasonapiplugin -> register();
 }
 
+// Create shordcode 
 function tbare_wordpress_plugin_demo($atts) {
     $Content .= '
     <div class="row desktop casino-list-header">
