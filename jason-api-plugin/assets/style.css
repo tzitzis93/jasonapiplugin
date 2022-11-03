@@ -4,6 +4,9 @@ div{
 .mobile{
     display: none;
 }
+.desktop{
+    display: block;
+}
 .casino-lists .row{
     border-bottom: 1px solid black;
     margin-bottom: .5rem;
@@ -89,10 +92,18 @@ ul {
   
 
   @media screen and (max-width: 600px) {
+
+        .mobile{
+            display: block;
+        }
+        .desktop{
+            display: none !important;
+        }
         .casino-list-item{
             flex-direction: column;
         }
-        .mobile{
-            display: block;
+        .casino-img{
+            margin: auto;
+            width: 50%;
         }
   }

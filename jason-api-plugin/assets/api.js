@@ -15,7 +15,7 @@ $(document).ready(function(){
 
             var html = "<div class=' row casino-list-item  casino-list-item"+i+"'>"+
             "<h3 class=' mobile pt-2 text-center section-title'>Casino</h3>"+
-            "<div class='col-12 col-sm-3 text-center casino-img-container"+i+"'><a class='casino-url"+i+"' href='' id='w3s'>Review</a></div>" + 
+            "<div class='col-12 col-sm-3 text-center casino-img-container"+i+"'><div><a class='casino-url"+i+"' href='' id='w3s'>Review</a></div></div>" + 
             "<h3 class=' mobile pt-2 text-center section-title'>Bonus</h3>"+
             "<div class='col-12 col-sm-3 text-center'><div class='ratings-container rating"+i+"'></div><div class='bonus"+i+"'></div></div>" + 
             "<h3 class=' mobile pt-2 text-center section-title'>Features</h3>"+

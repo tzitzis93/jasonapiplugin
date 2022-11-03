@@ -68,7 +68,7 @@ if( class_exists('Jasonapiplugin')){
 
 function tbare_wordpress_plugin_demo($atts) {
     $Content .= '
-    <div class="row casino-list-header">
+    <div class="row desktop casino-list-header">
         <div class="col-3 text-center">
           <p>Casino</p>
         </div>
