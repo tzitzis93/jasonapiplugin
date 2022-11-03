@@ -2,13 +2,10 @@
 
 $(document).ready(function(){
    var jsonUrl = myScript.pluginsUrl + '/jason-api-plugin/assets/data.json';
-   console.log(jsonUrl);
    
     $.getJSON(jsonUrl, function(data){
 
         var mydataArray=data.toplists["575"];
-
-
 
         mydataArray.sort((a, b) => {
             return a.position - b.position;
