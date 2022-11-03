@@ -35,12 +35,12 @@ class Jasonapiplugin{
     function uninstall(){
         flush_rewrite_rules();
     }
-    function custom_post_type(){
-        register_post_type( 'Platforms', [ 
-            'public' => true,
-            'label' => 'Platforms',
-        ]);
-    }
+    // function custom_post_type(){
+    //     register_post_type( 'Platforms', [ 
+    //         'public' => true,
+    //         'label' => 'Platforms',
+    //     ]);
+    // }
     function enqueue(){
         wp_enqueue_style( 'mypluginstyle' , plugins_url( '/assets/style.css', __FILE__ )  );
         wp_enqueue_style('bootstrap_css', '//stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css');
@@ -67,11 +67,6 @@ if( class_exists('Jasonapiplugin')){
 }
 
 function tbare_wordpress_plugin_demo($atts) {
-    $Content = "<style>\r\n";
-    $Content .= "h3.demoClass {\r\n";
-    $Content .= "color: #26b158;\r\n";
-    $Content .= "}\r\n";
-    $Content .= "</style>\r\n";
     $Content .= '
     <div class="row casino-list-header">
         <div class="col-3 text-center">
@@ -96,15 +91,7 @@ function tbare_wordpress_plugin_demo($atts) {
 
 <div class="casino-lists">
 </div>
-
-
-
-
-
-
-
-    <div class="demoClass1">Check it out!</div>
-    <h3 class="demoClass">Check it out!</h3>'
+'
     ;
      
     return $Content;
