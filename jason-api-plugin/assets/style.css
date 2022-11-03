@@ -1,10 +1,18 @@
 div{
     /* background-color: grey; */
 }
+.mobile{
+    display: none;
+}
 .casino-lists .row{
     border-bottom: 1px solid black;
     margin-bottom: .5rem;
     padding: 1.5rem 0;
+}
+.play-btn{
+    margin: auto;
+    width: 40%;
+    margin-bottom: .5rem;
 }
 
 ul {
@@ -19,6 +27,17 @@ ul {
     font-family: FontAwesome;
     display: inline-block;
     margin-left: -1.3em; /* same as padding-left set on li */
+    width: 1.3em; /* same as padding-left set on li */
+  }
+  .ratings-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .rating-star::before{
+    content: "\f005"; 
+    font-family: FontAwesome;
+    display: inline-block;
     width: 1.3em; /* same as padding-left set on li */
   }
 
@@ -53,3 +72,27 @@ ul {
     margin: 0;
 }
 
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 920px) {
+    body {
+      background-color: blue;
+    }
+  }
+  
+
+  @media screen and (max-width: 600px) {
+        .casino-list-item{
+            flex-direction: column;
+        }
+        .mobile{
+            display: block;
+        }
+  }

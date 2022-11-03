@@ -13,11 +13,15 @@ $(document).ready(function(){
 
         for (let i = 0; i < mydataArray.length; i++) {
 
-            var html = "<div class='row  casino-list-item"+i+"'>"+
-            "<div class='col-3 text-center casino-img-container"+i+"'><a class='casino-url"+i+"' href='' id='w3s'>Review</a></div>" + 
-            "<div class='col-3 text-center'><div class='rating"+i+"'><span class='rating-stars'></span></div><div class='bonus"+i+"'></div></div>" + 
-            "<div class='col-3 text-center'><div ><ul class='features features"+i+"'></ul></div></div>" +
-                "<div class='col-3 text-center'> <div class='play-btn'> <a class='play-url play-url"+i+"' href='' >PLAY NOW</a> </div> <div class='terms terms"+i+"'></div> </div>" +
+            var html = "<div class=' row casino-list-item  casino-list-item"+i+"'>"+
+            "<h3 class=' mobile pt-2 text-center section-title'>Casino</h3>"+
+            "<div class='col-12 col-sm-3 text-center casino-img-container"+i+"'><a class='casino-url"+i+"' href='' id='w3s'>Review</a></div>" + 
+            "<h3 class=' mobile pt-2 text-center section-title'>Bonus</h3>"+
+            "<div class='col-12 col-sm-3 text-center'><div class='ratings-container rating"+i+"'></div><div class='bonus"+i+"'></div></div>" + 
+            "<h3 class=' mobile pt-2 text-center section-title'>Features</h3>"+
+            "<div class='col-12 col-sm-3 text-center'><div ><ul class='features features"+i+"'></ul></div></div>" +
+            "<h3 class=' mobile pt-2 text-center section-title'>Play</h3>"+   
+            "<div class='col-12 col-sm-3 text-center'> <div class='play-btn'> <a class='play-url play-url"+i+"' href='' >PLAY NOW</a> </div> <div class='terms terms"+i+"'></div> </div>" +
                 '</div>' +
             '';
             
@@ -34,7 +38,7 @@ $(document).ready(function(){
             $('.casino-url'+i).attr("href",myScript.siteUrl+'/'+mydataArray[i].brand_id);
 
             
-            $('.rating'+i).html(mydataArray[i].info.rating);
+           
             $('.bonus'+i).html(mydataArray[i].info.bonus);
 
 
@@ -52,15 +56,40 @@ $(document).ready(function(){
             $(".play-url"+i).attr("href",myScript.siteUrl+'/'+mydataArray[i].play_url);
             
             $('.terms'+i).html(mydataArray[i].terms_and_conditions);
-                console.log(mydataArray[i].info.rating);
+                
+              var ratingNumber = mydataArray[i].info.rating;
+              console.log(ratingNumber);
+
+              
+
+            //   function CreateRatingStars() {
+            //     $('.rating'+i).html(ratingStar);
+            //     $('.rating'+i).html(ratingStar);
+            //   }
+
+              for (let x = 0; x < ratingNumber; x++) {
+
+                var ratingStar = $('<div></div>');
+                ratingStar.attr('class', "rating-star");
+                $('.rating'+i).prepend(ratingStar);
+               
+              }
+
+
+
+                 
 
 
           }
+          
 
 
     }).fail(function(){
         console.log('kalimera')
     })
+
+  
+
     
 });
 })(jQuery);
